@@ -47,7 +47,9 @@
           height="50"
         />
         <!-- Post Information -->
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p class="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
         <!-- Post Image -->
         <img
           src="/02-HTML-Fundamentals/images/post-img.jpg"
@@ -112,8 +114,10 @@
 
     <!-- RELATED POSTS -->
     <aside>
-      <h4>Related posts</h4>
-      <ul>
+      <!-- Header -->
+      <h4 class="aside-header">Related posts</h4>
+      <!-- Posts -->
+      <ul class="related-posts-list">
         <!-- POST 1 -->
         <li>
           <!-- Post Image -->
@@ -126,7 +130,7 @@
           <!-- Post Title -->
           <a href="#">How to learn Web Development</a>
           <!-- Author -->
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
 
         <!-- POST 2 -->
@@ -141,7 +145,7 @@
           <!-- Post Title -->
           <a href="#">The unkown powers of CSS</a>
           <!-- Author -->
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
 
         <!-- POST 3 -->
@@ -156,12 +160,14 @@
           <!-- Post Title -->
           <a href="#">Why JavaScript is awesome</a>
           <!-- Author -->
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
       </ul>
     </aside>
 
     <!-- FOOTER -->
-    <footer>Copyright &copy; 2027 by The Code Magazine</footer>
+    <footer>
+      <p class="copyright">Copyright &copy; 2027 by The Code Magazine</p>
+    </footer>
   </body>
 </html>
