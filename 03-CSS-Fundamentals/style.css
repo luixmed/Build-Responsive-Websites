@@ -13,7 +13,44 @@ body {
   font-size: 1.6rem;
 }
 
+/* Links */
+a:link,
+a:visited {
+  /* General */
+  display: inline-block;
+  text-decoration: none;
+
+  /* Font */
+  color: #1098ad;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
+}
+
+/* Other text */
+h4,
+p,
+li {
+  color: #444;
+}
+
 /* =================== HEADER SECTION =================== */
+.main-header {
+  background-color: #f7f7f7;
+}
 h1 {
   /* Font */
   font-size: 2.6rem;
@@ -27,15 +64,6 @@ h1 {
 }
 
 /* =================== BLOG SECTION =================== */
-h2 {
-  font-size: 4rem;
-}
-h3 {
-  font-size: 3rem;
-}
-h4 {
-  font-size: 2rem;
-}
 
 p {
   font-size: 2.2rem;
@@ -47,6 +75,14 @@ li {
 }
 
 /* =================== RELATED POSTS =================== */
+aside {
+  /* Box */
+  border-block: 5px solid #1098ad;
+
+  /* Style */
+  background-color: #f7f7f7;
+}
+
 .aside-header {
   text-transform: uppercase;
   text-align: center;
@@ -60,6 +96,16 @@ li {
   font-size: 1.8rem;
   font-weight: bold;
 }
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+/* li:nth-child(2) {
+  color: crimson;
+} */
 
 /* =================== FOOTER SECTION =================== */
 .copyright {
