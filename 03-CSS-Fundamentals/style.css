@@ -4,22 +4,28 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
 body {
+  /* Font */
   font-family: sans-serif;
   font-size: 1.6rem;
+
+  /* In order to position the like button */
+  position: relative;
 }
 
 /* CENTERING THE PAGE */
 .container {
-  width: 80rem;
+  width: 120rem;
   margin-inline: auto;
 }
 
-/* Links */
+/* LINKS */
 a:link,
 a:visited {
   /* General */
@@ -29,13 +35,12 @@ a:visited {
   /* Font */
   color: #1098ad;
 }
-
 a:hover {
   color: red;
   text-decoration: underline solid currentColor;
 }
 
-/* Headings */
+/* HEADINGS */
 h1,
 h2,
 h3 {
@@ -53,6 +58,14 @@ li {
   color: #444;
 }
 
+/* BUTTONS */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
 /* =================== HEADER SECTION =================== */
 /* HEADER */
 .main-header {
@@ -61,14 +74,15 @@ li {
   margin-bottom: 6rem;
 
   /* Layout */
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+
   /* Style */
   background-color: #f7f7f7;
 }
 
-/* TITLE */
+/* PAGE TITLE */
 h1 {
   /* Font */
   font-size: 2.6rem;
@@ -76,24 +90,21 @@ h1 {
   text-transform: uppercase;
 }
 
-/* NAVBAR */
-.main-navbar {
-  /* Layout */
-  display: grid;
-  place-content: center;
+/* THE BOOK EMOJI */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
 }
+
+/* NAVBAR */
+
+/* NAVBAR LINKS */
 .nav-list {
   list-style: none;
 
   /* Layout */
   display: flex;
   gap: 3rem;
-}
-
-/* AUTHOT */
-.author {
-  font-style: italic;
-  font-size: 1.6rem;
 }
 
 /* =================== BLOG SECTION =================== */
@@ -107,6 +118,24 @@ h1 {
   margin-bottom: 4rem;
 }
 
+/* AUTHOR'S IMAGE */
+.author-img {
+  float: left;
+  margin-bottom: 2rem;
+}
+
+/* AUTHOR'S POST INFO */
+.author {
+  /* Font */
+  font-style: italic;
+  font-size: 1.6rem;
+
+  /* Layout */
+  float: left;
+  margin-left: 2rem;
+  margin-top: 1.2rem;
+}
+
 /* POST IMAGE */
 .post-img {
   width: 100%;
@@ -117,6 +146,32 @@ h1 {
 .post-title {
   font-size: 4rem;
   margin-bottom: 3rem;
+
+  /* !In order to position the Top Element */
+  position: relative;
+}
+
+/* TOP ELEMENT */
+.post-title::after {
+  content: "TOP";
+
+  /* Font */
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  /* Box */
+  /* !To properly apply padding to this element, it needs to be a block element. However, by default, any pseudo-element is actually an inline element.*/
+  display: inline-block;
+  padding: 5px 10px;
+
+  /* Layout */
+  position: absolute;
+  top: -1.5rem;
+  right: -2.5rem;
+
+  /* Style */
+  background-color: #ffe70e;
 }
 
 /* SUBTITLE */
@@ -185,4 +240,57 @@ li:last-child {
 /* =================== FOOTER SECTION =================== */
 .copyright {
   font-size: 1.6rem;
+}
+
+/* =================== FOOTER SECTION =================== */
+.like-btn {
+  /* Font */
+  font-size: 2.2rem;
+
+  /* Box */
+  padding: 1.5rem 2.5rem;
+  border-radius: 8px;
+  border: 2px solid #1098ad;
+
+  /* Style */
+  background-color: #dceff2;
+
+  /* Layout */
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+}
+
+/********** PAGE LAYOUT USING FLOAT  **********/
+
+/* HEADER LAYOUT */
+h1 {
+  float: left;
+}
+
+.main-navbar {
+  float: right;
+  margin-top: 1rem;
+}
+
+/* !To address the height collapse of the header caused by its floated elements being removed from the page normal flow */
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* MAIN CONTENT LAYOUT */
+.post-container {
+  width: 83rem;
+  float: left;
+}
+
+.related-posts-container {
+  width: 30rem;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
