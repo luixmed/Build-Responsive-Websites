@@ -13,6 +13,12 @@ body {
   font-size: 1.6rem;
 }
 
+/* CENTERING THE PAGE */
+.container {
+  width: 80rem;
+  margin-inline: auto;
+}
+
 /* Links */
 a:link,
 a:visited {
@@ -22,6 +28,11 @@ a:visited {
 
   /* Font */
   color: #1098ad;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline solid currentColor;
 }
 
 /* Headings */
@@ -90,9 +101,16 @@ h1 {
 .post-container {
   margin-bottom: 6rem;
 }
+
 /* POST HEADER */
 .post-header {
   margin-bottom: 4rem;
+}
+
+/* POST IMAGE */
+.post-img {
+  width: 100%;
+  height: auto;
 }
 
 /* TITLE */
