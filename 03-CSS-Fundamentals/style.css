@@ -30,12 +30,7 @@ h2,
 h3 {
   color: #1098ad;
 }
-h2 {
-  font-size: 4rem;
-}
-h3 {
-  font-size: 3rem;
-}
+
 h4 {
   font-size: 2rem;
 }
@@ -48,9 +43,21 @@ li {
 }
 
 /* =================== HEADER SECTION =================== */
+/* HEADER */
 .main-header {
+  /* Box */
+  padding: 2rem;
+  margin-bottom: 6rem;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Style */
   background-color: #f7f7f7;
 }
+
+/* TITLE */
 h1 {
   /* Font */
   font-size: 2.6rem;
@@ -58,54 +65,104 @@ h1 {
   text-transform: uppercase;
 }
 
+/* NAVBAR */
+.main-navbar {
+  /* Layout */
+  display: grid;
+  place-content: center;
+}
+.nav-list {
+  list-style: none;
+
+  /* Layout */
+  display: flex;
+  gap: 3rem;
+}
+
+/* AUTHOT */
 .author {
   font-style: italic;
   font-size: 1.6rem;
 }
 
 /* =================== BLOG SECTION =================== */
+/* POST CONTAINER */
+.post-container {
+  margin-bottom: 6rem;
+}
+/* POST HEADER */
+.post-header {
+  margin-bottom: 4rem;
+}
 
-p {
+/* TITLE */
+.post-title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+/* SUBTITLE */
+.post-subtitle {
+  font-size: 3rem;
+  margin-block: 4rem 2rem;
+}
+
+/* PARAGRAPH */
+.post-paragraph {
   font-size: 2.2rem;
   line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-li {
-  font-size: 2rem;
+/* LIST */
+.post-list {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
 }
+
+/* LIST ITEM */
+.post-item {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.post-item:last-child {
+  margin-bottom: 0;
+}
+
+/* li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+ li:nth-child(2) {
+  color: crimson;
+} */
 
 /* =================== RELATED POSTS =================== */
-aside {
+
+/* GENERAL LAYOUT */
+.related-posts-container {
   /* Box */
+  width: 50rem;
+  padding-block: 5rem;
   border-block: 5px solid #1098ad;
 
   /* Style */
   background-color: #f7f7f7;
 }
 
+/* HEADER */
 .aside-header {
   text-transform: uppercase;
   text-align: center;
 }
 
-.related-posts-list {
-  list-style: none;
-}
-
+/* AUTHOR */
 .related-author {
   font-size: 1.8rem;
   font-weight: bold;
 }
-
-li:first-child {
-  font-weight: bold;
-}
-li:last-child {
-  font-style: italic;
-}
-/* li:nth-child(2) {
-  color: crimson;
-} */
 
 /* =================== FOOTER SECTION =================== */
 .copyright {
