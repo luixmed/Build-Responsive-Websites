@@ -22,3 +22,61 @@ html {
 body {
   font-family: "Inter", sans-serif;
 }
+
+/* PAGE LAYOUT */
+.container {
+  /* Box */
+  width: 96rem;
+  margin-inline: auto;
+}
+
+/* IMAGES */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* ==================== HEADER ==================== */
+/* GENERAL LAYOUT */
+header {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8rem;
+
+  /* Box */
+  margin-block: 4.8rem;
+}
+
+/***** HEADER TEXT *****/
+/* GENERAL LAYOUT */
+.header-text-box {
+  /* Layout */
+  align-self: center;
+}
+
+/* HEADER TITLE */
+h1 {
+  /* Font */
+  font-size: 4.4rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+
+  /* Box */
+  margin-bottom: 2.4rem;
+}
+
+/* HEADER DESCRIPTION */
+.header-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: 1.7;
+
+  /* Box */
+  margin-bottom: 2.4rem;
+}
