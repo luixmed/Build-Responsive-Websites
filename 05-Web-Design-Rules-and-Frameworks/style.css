@@ -155,3 +155,37 @@ h2 {
 .testimonial-author {
   font-size: 1.6rem;
 }
+
+/* ==================== CHAIRS SECTION ==================== */
+/* GENERAL LAYOUT */
+.chair-box {
+  padding: 2.4rem;
+}
+
+/* TITLE */
+h3 {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+/* DETAILS */
+.chair-details {
+  margin-bottom: 2.4rem;
+}
+.chair-details li {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+.chair-details li:last-child {
+  margin-bottom: 0;
+}
+
+/* PRICE */
+.chair-price {
+  /* Font */
+  font-size: 20px;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+}
