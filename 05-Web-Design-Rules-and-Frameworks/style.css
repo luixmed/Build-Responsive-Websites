@@ -30,6 +30,17 @@ body {
   margin-inline: auto;
 }
 
+section {
+  margin-bottom: 4.8rem;
+}
+
+/* HELPER CLASES */
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8rem;
+}
+
 /* IMAGES */
 img {
   display: block;
@@ -37,11 +48,17 @@ img {
   height: auto;
 }
 
+/* LISTS */
+ul {
+  list-style: none;
+}
+
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
 
 /* ==================== HEADER ==================== */
+
 /* GENERAL LAYOUT */
 header {
   /* Layout */
@@ -79,4 +96,28 @@ h1 {
 
   /* Box */
   margin-bottom: 2.4rem;
+}
+
+/* ==================== FEATURES SECTION ==================== */
+
+/* SECTION TITLE */
+h2 {
+  /* Font */
+  font-size: 3.6rem;
+  letter-spacing: -0.5px;
+
+  /* Box */
+  margin-bottom: 4.8rem;
+}
+
+/* FEATURES TITLE */
+.features-title {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+/* FEATURES DESCRIPTION */
+.features-text {
+  font-size: 1.8rem;
+  line-height: 1.7;
 }
