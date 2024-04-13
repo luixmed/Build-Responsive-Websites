@@ -1,5 +1,7 @@
 /* =================== BASIC STYLES =================== */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -17,12 +19,6 @@ body {
 
   /* In order to position the like button */
   position: relative;
-}
-
-/* CENTERING THE PAGE */
-.container {
-  width: 120rem;
-  margin-inline: auto;
 }
 
 /* LINKS */
@@ -66,17 +62,44 @@ button {
   font-family: inherit;
 }
 
+/* =================== GENERAL PAGE LAYOUT =================== */
+
+/* PAGE CONTAINER */
+.container {
+  /* Box */
+  width: 120rem;
+  margin: 0 auto 3rem;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 30rem;
+  column-gap: 7.5rem;
+  row-gap: 6rem;
+}
+
+/* MAIN SECTION LAYOUT */
+/* .main-container { */
+/* Box */
+/* margin-bottom: 6rem; */
+
+/* Layout */
+/* display: flex;
+  align-items: flex-start;
+  gap: 7.5rem; */
+/* } */
+
 /* =================== HEADER SECTION =================== */
 /* HEADER */
 .main-header {
   /* Box */
   padding: 2rem;
-  margin-bottom: 6rem;
 
   /* Layout */
-  /* display: flex;
+  grid-column: 1 / -1;
+
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 
   /* Style */
   background-color: #f7f7f7;
@@ -110,7 +133,8 @@ h1::first-letter {
 /* =================== BLOG SECTION =================== */
 /* POST CONTAINER */
 .post-container {
-  margin-bottom: 6rem;
+  /* Layout */
+  flex: 1;
 }
 
 /* POST HEADER */
@@ -118,10 +142,21 @@ h1::first-letter {
   margin-bottom: 4rem;
 }
 
+/* AUTHOR BOX */
+.author-box {
+  /* Box */
+  margin-bottom: 1.5rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* AUTHOR'S IMAGE */
 .author-img {
-  float: left;
-  margin-bottom: 2rem;
+  /* !This code was used to layout this content using floats */
+  /* float: left; */
 }
 
 /* AUTHOR'S POST INFO */
@@ -131,9 +166,10 @@ h1::first-letter {
   font-size: 1.6rem;
 
   /* Layout */
-  float: left;
+  /* !This code was used to layout this content using floats */
+  /* float: left;
   margin-left: 2rem;
-  margin-top: 1.2rem;
+  margin-top: 1.2rem; */
 }
 
 /* POST IMAGE */
@@ -217,9 +253,12 @@ li:last-child {
 /* GENERAL LAYOUT */
 .related-posts-container {
   /* Box */
-  width: 50rem;
-  padding-block: 5rem;
+  padding: 5rem 4rem;
   border-block: 5px solid #1098ad;
+
+  /* Layout */
+  /* flex: 0 0 30rem; */
+  align-self: self-start;
 
   /* Style */
   background-color: #f7f7f7;
@@ -229,20 +268,58 @@ li:last-child {
 .aside-header {
   text-transform: uppercase;
   text-align: center;
+
+  /* Box */
+  margin-bottom: 3rem;
+}
+
+/* RELATED POSTS LIST */
+.related-posts-list {
+  list-style: none;
+}
+
+/* RELATED POSTS ITEM */
+.related-post-item {
+  /* Box */
+  margin-bottom: 3rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* RELATED POSTS LINK */
+.related-link:link,
+.related-link:visited {
+  /* Font */
+  font-size: 1.7rem;
+  font-weight: bold;
+
+  /* Box */
+  margin-bottom: 5px;
 }
 
 /* AUTHOR */
 .related-author {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-style: italic;
 }
 
 /* =================== FOOTER SECTION =================== */
+footer {
+  /* Layout */
+  grid-column: 1 / -1;
+
+  /* Style */
+  text-align: center;
+}
+
 .copyright {
   font-size: 1.6rem;
 }
 
-/* =================== FOOTER SECTION =================== */
+/* =================== LIKE BUTTON =================== */
 .like-btn {
   /* Font */
   font-size: 2.2rem;
@@ -258,30 +335,30 @@ li:last-child {
   /* Layout */
   position: absolute;
   right: 4rem;
-  bottom: 4rem;
+  bottom: 0rem;
 }
 
 /********** PAGE LAYOUT USING FLOAT  **********/
 
 /* HEADER LAYOUT */
-h1 {
+/* h1 {
   float: left;
 }
 
 .main-navbar {
   float: right;
   margin-top: 1rem;
-}
+} */
 
 /* !To address the height collapse of the header caused by its floated elements being removed from the page normal flow */
-.clearfix::after {
+/* .clearfix::after {
   display: block;
   content: "";
   clear: both;
-}
+} */
 
 /* MAIN CONTENT LAYOUT */
-.post-container {
+/* .post-container {
   width: 83rem;
   float: left;
 }
@@ -293,4 +370,4 @@ h1 {
 
 footer {
   clear: both;
-}
+} */

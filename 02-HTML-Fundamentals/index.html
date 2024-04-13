@@ -33,24 +33,27 @@
         </nav>
       </header>
 
+      <!-- <main class="main-container"> -->
       <!-- POST SECTION -->
       <article class="post-container">
         <!-- Article's header -->
         <header class="post-header">
           <!-- Article Title -->
           <h2 class="post-title">The Basic Language of the Web: HTML</h2>
-          <!-- Author's photo -->
-          <img
-            src="/02-HTML-Fundamentals/images/laura-jones.jpg"
-            alt="Laura Jones profile photo"
-            width="50"
-            height="50"
-            class="author-img"
-          />
-          <!-- Post Information -->
-          <p class="author">
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
-          </p>
+          <div class="author-box">
+            <!-- Author's photo -->
+            <img
+              src="/02-HTML-Fundamentals/images/laura-jones.jpg"
+              alt="Laura Jones profile photo"
+              width="50"
+              height="50"
+              class="author-img"
+            />
+            <!-- Post Information -->
+            <p class="author">
+              Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+            </p>
+          </div>
           <!-- Post Image -->
           <img
             src="/02-HTML-Fundamentals/images/post-img.jpg"
@@ -60,7 +63,6 @@
             class="post-img"
           />
         </header>
-
         <!-- Introduction -->
         <p class="post-paragraph">
           All modern websites and web applications are built using three
@@ -71,10 +73,8 @@
           In this post, let's focus on HTML. We will learn what HTML is all
           about, and why you too should learn it.
         </p>
-
         <!-- Subtitle 1 -->
         <h3 class="post-subtitle">What is HTML?</h3>
-
         <!-- Content -->
         <p class="post-paragraph">
           HTML stands for HyperText Markup Language. It's a markup language that
@@ -89,29 +89,24 @@
         <p class="post-paragraph">
           In HTML, each element is made up of 3 parts:
         </p>
-
         <!-- Ordered List -->
         <ol class="post-list">
           <li class="post-item">The opening tag</li>
           <li class="post-item">The closing tag</li>
           <li class="post-item">The actual element</li>
         </ol>
-
         <!-- Link -->
         <p class="post-paragraph">
           You can learn more at the
           <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>.
         </p>
-
         <!-- Subtitle 2 -->
         <h3 class="post-subtitle">Why should you learn HTML?</h3>
-
         <!-- Content -->
         <p class="post-paragraph">
           There are countless reasons for learning the fundamental language of
           the web. Here are 5 of them:
         </p>
-
         <!-- List -->
         <ul class="post-list">
           <li class="post-item">
@@ -125,7 +120,6 @@
           <li class="post-item">To impress friends</li>
           <li class="post-item">To have fun 😃</li>
         </ul>
-
         <p class="post-paragraph">
           Hopefully you learned something new here. See you next time!
         </p>
@@ -138,7 +132,7 @@
         <!-- Posts -->
         <ul class="related-posts-list">
           <!-- POST 1 -->
-          <li>
+          <li class="related-post-item">
             <!-- Post Image -->
             <img
               src="/02-HTML-Fundamentals/images/related-1.jpg"
@@ -146,13 +140,15 @@
               width="75"
               height="75"
             />
-            <!-- Post Title -->
-            <a href="#">How to learn Web Development</a>
-            <!-- Author -->
-            <p class="related-author">By Jonas Schmedtmann</p>
+            <div>
+              <!-- Post Title -->
+              <a href="#" class="related-link">How to learn Web Development</a>
+              <!-- Author -->
+              <p class="related-author">By Jonas Schmedtmann</p>
+            </div>
           </li>
           <!-- POST 2 -->
-          <li>
+          <li class="related-post-item">
             <!-- Post Image -->
             <img
               src="/02-HTML-Fundamentals/images/related-2.jpg"
@@ -160,13 +156,15 @@
               width="75"
               height="75"
             />
-            <!-- Post Title -->
-            <a href="#">The unkown powers of CSS</a>
-            <!-- Author -->
-            <p class="related-author">By Jonas Schmedtmann</p>
+            <div>
+              <!-- Post Title -->
+              <a href="#" class="related-link">The unkown powers of CSS</a>
+              <!-- Author -->
+              <p class="related-author">By Jonas Schmedtmann</p>
+            </div>
           </li>
           <!-- POST 3 -->
-          <li>
+          <li class="related-post-item">
             <!-- Post Image -->
             <img
               src="/02-HTML-Fundamentals/images/related-3.jpg"
@@ -174,13 +172,16 @@
               width="75"
               height="75"
             />
-            <!-- Post Title -->
-            <a href="#">Why JavaScript is awesome</a>
-            <!-- Author -->
-            <p class="related-author">By Jonas Schmedtmann</p>
+            <div>
+              <!-- Post Title -->
+              <a href="#" class="related-link">Why JavaScript is awesome</a>
+              <!-- Author -->
+              <p class="related-author">By Jonas Schmedtmann</p>
+            </div>
           </li>
         </ul>
       </aside>
+      <!-- </main> -->
 
       <!-- FOOTER -->
       <footer>
