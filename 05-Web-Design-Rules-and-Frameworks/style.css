@@ -189,3 +189,10 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+
+/* ==================== FOOTER SECTION ==================== */
+
+footer {
+  font-size: 1.4rem;
+  margin-bottom: 4.8rem;
+}
