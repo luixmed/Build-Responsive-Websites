@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TITLE -->
     <title>Hero Section</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <style>
       :root {
@@ -29,17 +36,15 @@
       }
       body {
         /* Font */
-        font-family: "Inter", sans-serif;
+        font-family: "Rubik", sans-serif;
         color: var(--color-gray);
         font-size: 1.6rem;
         line-height: 1;
+      }
 
-        /* Box */
-        height: 100vh;
-
-        /* Centering its content */
-        display: grid;
-        place-content: center;
+      .container {
+        width: 120rem;
+        margin-inline: auto;
       }
 
       button {
@@ -52,7 +57,106 @@
         display: inline-block;
         text-decoration: none;
       }
+
+      /* HERO SECTION */
+      header {
+        /* Font */
+        color: white;
+
+        /* Box */
+        height: 100vh;
+
+        /* In order to center the header-content */
+        position: relative;
+
+        /* Style */
+        background-image: linear-gradient(
+            to right,
+            rgb(34 34 34 / 60%),
+            rgb(34 34 34 / 60%)
+          ),
+          url(/06-Components-and-Layout-Patterns/hero.jpg);
+        background-size: cover;
+        background-position: top;
+      }
+
+      /* NAVBAR */
+      nav {
+        /* Font */
+        font-size: 2rem;
+        font-weight: 700;
+
+        /* Box */
+        padding-top: 3.2rem;
+
+        /* Layout */
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header-content {
+        /* Layout */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container-inner {
+        width: 50%;
+      }
+
+      /* TITLE */
+      h1 {
+        font-size: 5.2rem;
+        line-height: 1.05;
+
+        /* Box */
+        margin-bottom: 3.2rem;
+      }
+
+      /* DESCRIPTION */
+      p {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 4.8rem;
+      }
+
+      /* BUTTON */
+      .btn:link,
+      .btn:visited {
+        /* Font */
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+
+        /* Box */
+        padding: 1.6rem 3.2rem;
+        border-radius: 9px;
+
+        /* Style */
+        background-color: #e67e22;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="container">
+        <div>LOGO</div>
+        <div>NAVIGATION</div>
+      </nav>
+
+      <div class="header-content container">
+        <div class="header-container-inner">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will make you eat
+            healthy again. Tailored to your personal tastes and nutritional
+            needs.
+          </p>
+          <a href="#" class="btn">Start eating well</a>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
