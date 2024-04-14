@@ -22,6 +22,8 @@
         --color-gray: #343a40;
         --color-gray-tint-1: #868e96;
         --color-gray-tint-2: #adb5bd;
+        --color-gray-tint-3: #e9ecef;
+        --color-gray-tint-4: #f8f9fa;
       }
       * {
         margin: 0;
@@ -48,16 +50,36 @@
       }
 
       table {
+        /* Font */
+        font-size: 1.8rem;
+        /* Box */
         width: 80rem;
-        /* border: 1px solid var(--color-gray); */
-        /* border-collapse: collapse; */
+        /* Style */
+        border-collapse: collapse;
       }
 
       th,
       td {
         text-align: left;
         padding: 1.6rem 2.4rem;
-        /* border: 1px solid var(--color-gray); */
+      }
+
+      /* TABLE HEAD */
+      thead th {
+        /* Font */
+        color: white;
+        /* Box */
+        width: 25%;
+        /* Style */
+        background-color: var(--color-primary);
+      }
+
+      /* TABLE BODY */
+      tbody tr:nth-child(odd) {
+        background-color: var(--color-gray-tint-4);
+      }
+      tbody tr:nth-child(even) {
+        background-color: var(--color-gray-tint-3);
       }
     </style>
   </head>
