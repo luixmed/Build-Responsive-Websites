@@ -2,6 +2,14 @@
 /* BASIC RESET */
 /* ------------------------ */
 
+:root {
+  --color-primary: #087f5b;
+  --color-primary-tint-1: ##099268;
+
+  --color-gray: #343a40;
+  --color-gray-tint-1: #495057;
+}
+
 *,
 *::before,
 *::after {
@@ -20,7 +28,12 @@ html {
 /* ------------------------ */
 
 body {
+  /* Font */
   font-family: "Inter", sans-serif;
+  color: #343a40;
+
+  /* Box */
+  border-bottom: 8px solid #099268;
 }
 
 /* PAGE LAYOUT */
@@ -51,6 +64,37 @@ img {
 /* LISTS */
 ul {
   list-style: none;
+}
+
+/* BUTTON */
+.btn:link,
+.btn:visited {
+  /* General styles */
+  display: inline-block;
+  text-decoration: none;
+
+  /* Font */
+  color: white;
+  font-weight: 500;
+
+  /* Style */
+  text-transform: uppercase;
+  background-color: #087f5b;
+  transition: all 0.3s;
+}
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+}
+
+.btn--big {
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+}
+
+.btn--small {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
 }
 
 /* ------------------------ */
@@ -126,8 +170,21 @@ h2 {
 
 /* GENERAL LAYOUT */
 .testimonial-box {
+  /* Font */
+  color: white;
+
+  /* Layout */
   grid-column: 2 / -1;
   align-self: center;
+}
+
+/* GENERAL STYLE */
+.testimonial-section {
+  /* Box */
+  padding: 2.4rem;
+
+  /* Style */
+  background-color: #087f5b;
 }
 
 /* TESTIMONIAL TITLE */
@@ -188,11 +245,16 @@ h3 {
   /* Layout */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* ==================== FOOTER SECTION ==================== */
 
 footer {
+  /* Font */
+  color: #495057;
   font-size: 1.4rem;
+
+  /* Box */
   margin-bottom: 4.8rem;
 }
