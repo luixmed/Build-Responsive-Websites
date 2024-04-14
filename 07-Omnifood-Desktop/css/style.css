@@ -1,0 +1,49 @@
+/* ================= DESIGN SYSTEM ================= */
+
+:root {
+  /** PRIMARY COLOR **/
+  --color-tint-2: #fdf2e9;
+  --color-tint-1: #fae5d3;
+  --color-primary: #e67e22;
+  --color-shade-1: #cf711f;
+  --color-shade-2: #45200a;
+
+  /** GRAY COLOR **/
+  -color-gray-1: #333;
+  -color-gray-2: #555;
+  -color-gray-3: #6f6f6f; /* !Allowed on #fdf2e9 */
+  -color-gray-4: #767676; /* !Allowed on white */
+  -color-gray-5: #888;
+}
+
+/* TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/* ================= GENERAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  /* Font */
+  color: #555;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+}
