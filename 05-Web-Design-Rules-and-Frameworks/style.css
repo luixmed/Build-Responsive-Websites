@@ -5,6 +5,8 @@
 :root {
   --color-primary: #087f5b;
   --color-primary-tint-1: ##099268;
+  --color-primary-tint-2: #c3fae8;
+  --color-primary-tint-3: #e6fcf5;
 
   --color-gray: #343a40;
   --color-gray-tint-1: #495057;
@@ -44,7 +46,7 @@ body {
 }
 
 section {
-  margin-bottom: 4.8rem;
+  margin-bottom: 9.6rem;
 }
 
 /* HELPER CLASES */
@@ -59,6 +61,9 @@ img {
   display: block;
   width: 100%;
   height: auto;
+
+  /* Style */
+  border-radius: 1rem;
 }
 
 /* LISTS */
@@ -77,10 +82,13 @@ ul {
   color: white;
   font-weight: 500;
 
+  /* Box */
+  border-radius: 10rem;
+
   /* Style */
   text-transform: uppercase;
   background-color: #087f5b;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .btn:hover,
 .btn:active {
@@ -111,7 +119,7 @@ header {
   column-gap: 8rem;
 
   /* Box */
-  margin-block: 4.8rem;
+  margin-block: 6.4rem 9.6rem;
 }
 
 /***** HEADER TEXT *****/
@@ -129,7 +137,7 @@ h1 {
   letter-spacing: -1px;
 
   /* Box */
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 /* HEADER DESCRIPTION */
@@ -158,10 +166,11 @@ h2 {
 .features-icon {
   /* Font */
   stroke: #087f5b;
+
   /* Box */
   width: 3.2rem;
   height: 3.2rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 /* FEATURES TITLE */
@@ -192,6 +201,7 @@ h2 {
 .testimonial-section {
   /* Box */
   padding: 2.4rem;
+  border-radius: 1rem;
 
   /* Style */
   background-color: #087f5b;
@@ -210,6 +220,7 @@ h2 {
 /* TESTIMONIAL CONTENT */
 .testimonial-text {
   /* Font */
+  color: #e6fcf5;
   font-size: 1.8rem;
   font-style: italic;
   line-height: 1.7;
@@ -220,13 +231,28 @@ h2 {
 
 /* AUTHOR */
 .testimonial-author {
+  color: #c3fae8;
   font-size: 1.6rem;
 }
 
 /* ==================== CHAIRS SECTION ==================== */
 /* GENERAL LAYOUT */
+.chair {
+  /* Box */
+  border-radius: 1rem;
+
+  /* Style */
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.07);
+}
+
+.chair img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .chair-box {
-  padding: 2.4rem;
+  /* Box */
+  padding: 3.2rem;
 }
 
 /* TITLE */
@@ -237,14 +263,14 @@ h3 {
 
 /* DETAILS */
 .chair-details {
-  margin-bottom: 2.4rem;
+  margin-bottom: 4.8rem;
 }
 .chair-details li {
   /* Font */
   font-size: 1.6rem;
 
   /* Box */
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
 
   /* Layout */
   display: flex;
