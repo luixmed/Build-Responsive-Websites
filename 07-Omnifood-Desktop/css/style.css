@@ -6,7 +6,8 @@
   --color-tint-1: #fae5d3;
   --color-primary: #e67e22;
   --color-shade-1: #cf711f;
-  --color-shade-2: #45200a;
+  --color-shade-2: #a15818;
+  --color-shade-3: #45200a;
 
   /** GRAY COLOR **/
   --color-gray-1: #333;
@@ -81,7 +82,9 @@ button {
 }
 
 /* ================= HERO SECTION ================= */
-/* HERO GENERAL LAYOUT */
+
+/***** HERO GENERAL LAYOUT *****/
+
 .section-hero {
   /* Box */
   padding-block: 9.6rem;
@@ -103,6 +106,7 @@ button {
 }
 
 /***** HERO TEXT *****/
+
 /* TITLE */
 .heading-primary {
   /* Font */
@@ -126,7 +130,8 @@ button {
   margin-bottom: 4.8rem;
 }
 
-/* HERO BUTTONS */
+/***** HERO BUTTONS *****/
+
 .btn:link,
 .btn:visited {
   /* Font */
@@ -161,4 +166,46 @@ button {
 .btn--outline:hover,
 .btn--outline:active {
   background-color: var(--color-tint-2);
+}
+
+/***** SATISFIED CUSTOMERS *****/
+
+/* GENERAL LAYOUT */
+.satisfied-customers {
+  /* Box */
+  margin-top: 8rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* CUSTOMER IMAGES CONTAINER */
+.customers-img-container {
+  /* Layout */
+  display: flex;
+}
+
+/* SATISFIED CUSTOMERS IMAGES */
+.customers-img-container img {
+  /* Box */
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-tint-2);
+  margin-right: -1.6rem;
+}
+.customers-img-container img:last-child {
+  margin-right: 0;
+}
+
+/* DELIVERED MEALS */
+.total-delivered-meals {
+  /* Font */
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.total-delivered-meals span {
+  color: var(--color-shade-2);
+  font-weight: 700;
 }
