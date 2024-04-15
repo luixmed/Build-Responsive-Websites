@@ -6,7 +6,7 @@
   --color-tint-1: #fae5d3;
   --color-primary: #e67e22;
   --color-shade-1: #cf711f;
-  --color-shade-2: #a15818;
+  --color-shade-2: #a15818; /* !Allowed on #fdf2e9*/
   --color-shade-3: #45200a;
 
   /** GRAY COLOR **/
@@ -15,6 +15,18 @@
   --color-gray-3: #6f6f6f; /* !Allowed on #fdf2e9 */
   --color-gray-4: #767676; /* !Allowed on white */
   --color-gray-5: #888;
+
+  /** FONT WEIGHTS **/
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /** LINE HEIGHTS **/
+  --line-height-big-text: 1.05;
+  --line-height-paragraph: 1.7;
+
+  /** BORDER RADIUS **/
+  --border-radius-sm: 9px;
 }
 
 /* TYPOGRAPHY SYSTEM
@@ -70,6 +82,11 @@ button {
   font-family: inherit;
 }
 
+/* LIST */
+ul {
+  list-style: none;
+}
+
 /* BUTTON ANIMATION */
 a,
 button {
@@ -81,13 +98,76 @@ button {
   margin-right: 1.6rem !important;
 }
 
+/* ================= HEADER SECTION ================= */
+
+/* GENERAL LAYOUT */
+header {
+  /* Box */
+  height: 9.6rem; /* !Because we want it to be sticky */
+  padding-inline: 4.8rem;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+/* LOGO */
+.logo {
+  height: 2.2rem;
+}
+
+/***** NAVBAR *****/
+
+/* GENERAL LAYOUT */
+.main-nav-list {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+/* LINK */
+.main-nav-link:link,
+.main-nav-link:visited {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-medium);
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--color-shade-2);
+}
+
+/* CTA LINK */
+.nav-cta:link,
+.nav-cta:visited {
+  /* Font */
+  color: white;
+
+  /* Box */
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--border-radius-sm);
+
+  /* Style */
+  background-color: var(--color-primary);
+}
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: var(--color-shade-1);
+}
+
 /* ================= HERO SECTION ================= */
 
 /***** HERO GENERAL LAYOUT *****/
 
 .section-hero {
   /* Box */
-  padding-block: 9.6rem;
+  padding-block: 4.8rem 9.6rem;
 
   /* Style */
   background-color: var(--color-tint-2);
@@ -97,6 +177,7 @@ button {
   /* Box */
   max-width: 130rem;
   margin-inline: auto;
+  padding-inline: 3.2rem;
 
   /* Layout */
   display: grid;
@@ -112,8 +193,8 @@ button {
   /* Font */
   color: var(--color-gray-1);
   font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-big-text);
   letter-spacing: -0.5px;
 
   /* BOX */
@@ -124,7 +205,7 @@ button {
 .hero-description {
   /* Font */
   font-size: 2rem;
-  line-height: 1.7;
+  line-height: var(--line-height-paragraph);
 
   /* Box */
   margin-bottom: 4.8rem;
@@ -136,11 +217,11 @@ button {
 .btn:visited {
   /* Font */
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 
   /* Box */
   padding: 1.6rem 3.2rem;
-  border-radius: 9px;
+  border-radius: var(--border-radius-sm);
 }
 
 /* CTA BUTTON */
@@ -203,9 +284,9 @@ button {
 .total-delivered-meals {
   /* Font */
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 .total-delivered-meals span {
   color: var(--color-shade-2);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
