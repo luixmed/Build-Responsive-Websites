@@ -16,6 +16,11 @@
   --color-gray-4: #767676; /* !Allowed on white */
   --color-gray-5: #888;
 
+  /** TAG COLOR **/
+  --color-tag-vegetarian: #51cf66;
+  --color-tag-vegan: #a9e34b;
+  --color-tag-paleo: #ffd43b;
+
   /** FONT WEIGHTS **/
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -32,6 +37,7 @@
 
   /** BORDER RADIUS **/
   --border-radius-sm: 9px;
+  --border-radius-md: 12px;
 }
 
 /* ================= HEADER SECTION ================= */
@@ -289,4 +295,91 @@ header {
   /* Font */
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/* ================= MEALS SECTION ================= */
+.section-meals {
+  padding-block: 9.6rem;
+}
+
+/***** CARD GENERAL LAYOUT *****/
+.meal-card {
+  /* Box */
+  border-radius: var(--border-radius-md);
+
+  /* Style */
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
+  overflow: hidden;
+}
+.meal-content {
+  /* Box */
+  padding: 3.2rem 4.8rem 4.8rem;
+}
+
+/***** CARD TEXT *****/
+
+/* MEAL's NAME */
+.meal-name {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-semibold);
+
+  margin-bottom: 3.2rem;
+}
+
+/***** MEAL's ATTRIBUTE *****/
+
+/* TAG */
+.meal-tags {
+  margin-bottom: 1.2rem;
+
+  /* Layout */
+  display: flex;
+  gap: 6px;
+}
+.tag {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-small-text);
+  text-transform: uppercase;
+
+  /* Box */
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10rem;
+}
+.tag--vegetarian {
+  background-color: var(--color-tag-vegetarian);
+}
+.tag--vegan {
+  background-color: var(--color-tag-vegan);
+}
+.tag--paleo {
+  background-color: var(--color-tag-paleo);
+}
+
+/* GENERAL LAYOUT */
+.meal-item {
+  /* Font */
+  font-size: 1.8rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.meal-item + .meal-item {
+  margin-top: 2rem;
+}
+
+/* ICON */
+.meal-icon {
+  /* Font */
+  color: var(--color-primary);
+  /* Box */
+  width: 2.4rem;
+  height: 2.4rem;
 }

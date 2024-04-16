@@ -68,6 +68,11 @@ button {
   transition: all 0.3s;
 }
 
+/* STRONG */
+strong {
+  font-weight: 500;
+}
+
 /* ================= REUSABLE COMPONENTS ================= */
 
 /***** HEADINGS *****/
