@@ -43,7 +43,7 @@
 /* ================= HEADER SECTION ================= */
 
 /* GENERAL LAYOUT */
-header {
+.header {
   /* Box */
   height: 9.6rem; /* !Because we want it to be sticky */
   padding-inline: 4.8rem;
@@ -310,10 +310,18 @@ header {
   /* Style */
   box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
   overflow: hidden;
+
+  /* Animation */
+  transition: all 0.4s;
 }
 .meal-content {
   /* Box */
   padding: 3.2rem 4.8rem 4.8rem;
+}
+
+.meal-card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgb(0 0 0 / 6%);
 }
 
 /***** CARD TEXT *****/
@@ -382,6 +390,12 @@ header {
   /* Box */
   width: 2.4rem;
   height: 2.4rem;
+}
+
+/***** LINK ALL RECIPES *****/
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
 }
 
 /* ================= TESTIMONIALS SECTION ================= */
