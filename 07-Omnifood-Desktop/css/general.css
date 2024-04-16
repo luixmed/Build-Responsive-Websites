@@ -165,6 +165,46 @@ strong {
   background-color: var(--color-tint-2);
 }
 
+/***** LINK ALL RECIPES ******/
+.link:link,
+.link:visited {
+  /* Font */
+  color: var(--color-primary);
+
+  /* Box */
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+}
+.link:hover,
+.link:active {
+  color: var(--color-shade-1);
+  border-bottom: 1px solid transparent;
+}
+
+/***** LIST *****/
+/* ITEM */
+.list-item {
+  /* Font */
+  font-size: 1.8rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-item + .list-item {
+  margin-top: 1.6rem;
+}
+
+/* ICON */
+.list-icon {
+  /* Font */
+  color: var(--color-primary);
+  /* Box */
+  width: 3rem;
+  height: 3rem;
+}
+
 /* ================= HELPER CLASSES ================= */
 .container {
   max-width: 120rem;
@@ -199,4 +239,12 @@ strong {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
 }
