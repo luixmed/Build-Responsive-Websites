@@ -1,4 +1,4 @@
-/* ================= DESIGN SYSTEM ================= */
+/* !REMOVE CUSTOM PROPERTIES AND PUT IT BACK IN general.css */
 
 :root {
   /** PRIMARY COLOR **/
@@ -22,80 +22,16 @@
   --font-weight-bold: 700;
 
   /** LINE HEIGHTS **/
-  --line-height-big-text: 1.05;
+  --line-height-h1: 1.05;
+  --line-height-h2: 1.2;
   --line-height-paragraph: 1.7;
+
+  /** LETTER SPACING **/
+  --letter-spacing-big-text: -0.5px;
+  --letter-spacing-small-text: 0.75px;
 
   /** BORDER RADIUS **/
   --border-radius-sm: 9px;
-}
-
-/* TYPOGRAPHY SYSTEM
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
-
-/* WHITESPACE
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
-
-/* ================= GENERAL RESET ================= */
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  /* Font */
-  color: #555;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-/* IMAGE */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* LINKS */
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-/* BUTTON */
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  font-family: inherit;
-}
-
-/* LIST */
-ul {
-  list-style: none;
-}
-
-/* BUTTON ANIMATION */
-a,
-button {
-  transition: all 0.3s;
-}
-
-/* ================= HELPER CLASSES ================= */
-.margin-right-sm {
-  margin-right: 1.6rem !important;
 }
 
 /* ================= HEADER SECTION ================= */
@@ -188,19 +124,6 @@ header {
 
 /***** HERO TEXT *****/
 
-/* TITLE */
-.heading-primary {
-  /* Font */
-  color: var(--color-gray-1);
-  font-size: 5.2rem;
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-big-text);
-  letter-spacing: -0.5px;
-
-  /* BOX */
-  margin-bottom: 3.2rem;
-}
-
 /* DESCRIPTION */
 .hero-description {
   /* Font */
@@ -209,44 +132,6 @@ header {
 
   /* Box */
   margin-bottom: 4.8rem;
-}
-
-/***** HERO BUTTONS *****/
-
-.btn:link,
-.btn:visited {
-  /* Font */
-  font-size: 2rem;
-  font-weight: var(--font-weight-semibold);
-
-  /* Box */
-  padding: 1.6rem 3.2rem;
-  border-radius: var(--border-radius-sm);
-}
-
-/* CTA BUTTON */
-.btn--cta:link,
-.btn--cta:visited {
-  color: white;
-  background-color: var(--color-primary);
-}
-.btn--cta:hover,
-.btn--cta:active {
-  background-color: var(--color-shade-1);
-}
-
-/* OUTLINE BUTTON */
-.btn--outline:link,
-.btn--outline:visited {
-  color: var(--color-gray-2);
-  background-color: white;
-
-  /* !Important */
-  box-shadow: inset 0 0 0 3px white;
-}
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: var(--color-tint-2);
 }
 
 /***** SATISFIED CUSTOMERS *****/
@@ -289,4 +174,83 @@ header {
 .total-delivered-meals span {
   color: var(--color-shade-2);
   font-weight: var(--font-weight-bold);
+}
+
+/* ================= HOW IT WORKS SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-how {
+  /* Box */
+  padding-block: 9.6rem;
+}
+
+/***** IMAGE *****/
+
+/* CIRCLE */
+.step-img-box {
+  position: relative;
+}
+.step-img-box::before,
+.step-img-box::after {
+  /* General Style */
+  content: "";
+  display: block;
+
+  /* Box */
+  border-radius: 50%;
+
+  /* Layout */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  /* Box */
+  /* !these are actually 60%s of the parent's elements width. */
+  width: 60%;
+  padding-bottom: 60%;
+
+  /* Layout */
+  z-index: -2;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+.step-img-box::after {
+  /* Box */
+  width: 45%;
+  padding-bottom: 45%;
+
+  /* Layout */
+  z-index: -1;
+
+  /* Style */
+  background-color: var(--color-tint-1);
+}
+
+/* IMAGE */
+.step-img {
+  width: 35%;
+  margin-inline: auto; /* !Centering the image */
+}
+
+/***** TEXT *****/
+
+/* NUMBER */
+.step-number {
+  /* Font */
+  color: #ddd;
+  font-size: 8.6rem;
+  font-weight: var(--font-weight-semibold);
+
+  /* Box */
+  margin-bottom: 1.2rem;
+}
+
+/* DESCRIPTION */
+.step-description {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
