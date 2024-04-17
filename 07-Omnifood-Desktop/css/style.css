@@ -4,10 +4,14 @@
   /** PRIMARY COLOR **/
   --color-tint-2: #fdf2e9;
   --color-tint-1: #fae5d3;
+  --color-tint-3: #eb984e;
   --color-primary: #e67e22;
   --color-shade-1: #cf711f;
   --color-shade-2: #a15818; /* !Allowed on #fdf2e9*/
   --color-shade-3: #45200a;
+
+  --color-primary-transparent-50: rgba(230, 125, 34, 0.5);
+  --color-transparent-1: rgba(253, 241, 232, 0.5);
 
   /** GRAY COLOR **/
   --color-gray-1: #333;
@@ -34,6 +38,10 @@
   /** LETTER SPACING **/
   --letter-spacing-big-text: -0.5px;
   --letter-spacing-small-text: 0.75px;
+
+  /** SHADOWS **/
+  --box-shadow-light: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
+  --box-shadow-dark: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
 
   /** BORDER RADIUS **/
   --border-radius-sm: 9px;
@@ -308,7 +316,7 @@
   border-radius: var(--border-radius-md);
 
   /* Style */
-  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
+  box-shadow: var(--box-shadow-light);
   overflow: hidden;
 
   /* Animation */
@@ -617,4 +625,117 @@
   /* Font */
   font-size: 1.8rem;
   line-height: var(--line-height-paragraph);
+}
+
+/* ================= CTA SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-cta {
+  padding-block: 9.6rem;
+}
+
+.cta {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  /* Style */
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-tint-3),
+    var(--color-primary)
+  );
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-dark);
+  overflow: hidden;
+}
+
+/***** TEXT BOX *****/
+
+/* GENERAL LAYOUT */
+.cta-text-box {
+  /* Font */
+  color: var(--color-shade-3);
+
+  /* Box */
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+/* TITLE */
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+/* DESCRIPTION */
+.cta-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+  /* Box */
+  margin-bottom: 4.8rem;
+}
+
+/***** CTA FORM *****/
+
+.cta-form {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+/* LABEL */
+.cta-form label {
+  /* Font */
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-medium);
+
+  /* Box */
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+/* INPUT */
+.cta-form input,
+.cta-form select {
+  /* Font */
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.8rem;
+
+  /* Box */
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+
+  /* Style */
+  background-color: var(--color-tint-2);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+}
+
+/* INPUT PLACEHOLDER */
+.cta-form input::placeholder {
+  /* Font */
+  color: #aaa;
+}
+
+/* FOCUS STATE */
+.cta *:focus {
+  box-shadow: 0 0 0 8px var(--color-transparent-1);
+}
+
+/***** IMAGE *****/
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(238, 164, 100, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url(/07-Omnifood-Desktop/img/eating.jpg);
+  background-size: cover;
+  background-position: center;
 }

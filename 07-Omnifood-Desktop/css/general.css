@@ -53,7 +53,6 @@ a {
 button {
   cursor: pointer;
   border: none;
-  outline: none;
   font-family: inherit;
 }
 
@@ -71,6 +70,12 @@ button {
 /* STRONG */
 strong {
   font-weight: 500;
+}
+
+/* FOCUS STATE */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px var(--color-primary-transparent-50);
 }
 
 /* ================= REUSABLE COMPONENTS ================= */
@@ -129,6 +134,7 @@ strong {
 /***** BUTTONS *****/
 
 /* GENERAL BUTTON STYLES */
+.btn,
 .btn:link,
 .btn:visited {
   /* Font */
@@ -165,6 +171,10 @@ strong {
   background-color: var(--color-tint-2);
 }
 
+.btn--outline:focus {
+  box-shadow: 0 0 0 8px var(--color-primary-transparent-50);
+}
+
 /***** LINK ALL RECIPES ******/
 .link:link,
 .link:visited {
@@ -179,6 +189,25 @@ strong {
 .link:active {
   color: var(--color-shade-1);
   border-bottom: 1px solid transparent;
+}
+
+/* FORM BUTTON */
+.btn--form {
+  /* Font */
+  color: var(--color-tint-2);
+
+  /* Box */
+  padding: 1.2rem;
+
+  /* Layout (only if necessary) */
+  align-self: self-end;
+
+  /* Style */
+  background-color: var(--color-shade-3);
+}
+.btn--form:hover {
+  color: #555;
+  background-color: white;
 }
 
 /***** LIST *****/
