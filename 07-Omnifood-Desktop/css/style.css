@@ -407,6 +407,7 @@
 }
 
 /* ================= TESTIMONIALS SECTION ================= */
+
 .section-testimonials {
   /* Layout */
   display: grid;
@@ -631,7 +632,7 @@
 
 /* GENERAL LAYOUT */
 .section-cta {
-  padding-block: 9.6rem;
+  padding-block: 4.8rem 12.8rem;
 }
 
 .cta {
@@ -738,4 +739,87 @@
     url(/07-Omnifood-Desktop/img/eating.jpg);
   background-size: cover;
   background-position: center;
+}
+
+/* ================= FOOTER SECTION ================= */
+.footer {
+  padding-block: 12.8rem;
+  /* Style */
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/***** COLUMN LOGO *****/
+
+/* GENERAL LAYOUT */
+.logo-col {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  /* Layout */
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  /* Box */
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* COPYRIGHT */
+.copyright {
+  /* Font */
+  color: var(--color-gray-4);
+  font-size: 1.4rem;
+  line-height: 1.6;
+
+  /* Layout */
+  margin-top: auto;
+}
+
+/***** CONTACT US *****/
+.contacts {
+  /* Font */
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.contacts p:first-child {
+  margin-bottom: 2.4rem;
+}
+
+/***** FOOTER NAVBAR *****/
+
+/* FOOTER HEADING */
+.footer-heading {
+  /* Font */
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-medium);
+  /* Box */
+  margin-bottom: 4rem;
+}
+
+/* FOOTER LINK */
+.footer-link:link,
+.footer-link:visited {
+  /* Font */
+  color: var(--color-gray-4);
+}
+.footer-link:hover,
+.footer-link:active {
+  color: var(--color-gray-1);
+}
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
 }
