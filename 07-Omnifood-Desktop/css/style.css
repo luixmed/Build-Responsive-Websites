@@ -488,13 +488,12 @@
   width: 75%; /* !75% of grid cell's width */
   padding: 4.8rem;
   border-radius: var(--border-radius-md);
-  border: 2px solid transparent;
+  border: 2px solid var(--color-tint-2);
 }
 
 /* GENERAL STYLE */
 .pricing-plan--starter {
   justify-self: end;
-  border-color: var(--color-tint-2);
 }
 
 .pricing-plan--complete {
@@ -577,4 +576,45 @@
 .plan-sign-up {
   text-align: center;
   margin-top: 4.8rem;
+}
+
+/* PLAN DETAILS */
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ================= FEATURE SECTION ================= */
+
+/* ICON */
+.feature-icon {
+  color: var(--color-primary);
+
+  /* Box */
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+/* TITLE */
+.feature-title {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  /* Box */
+  margin-bottom: 1.6rem;
+}
+
+/* TEXT */
+.feature-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
 }
