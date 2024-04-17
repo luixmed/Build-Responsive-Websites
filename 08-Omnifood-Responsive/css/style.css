@@ -1,0 +1,825 @@
+/* !REMOVE CUSTOM PROPERTIES AND PUT IT BACK IN general.css */
+
+:root {
+  /** PRIMARY COLOR **/
+  --color-tint-2: #fdf2e9;
+  --color-tint-1: #fae5d3;
+  --color-tint-3: #eb984e;
+  --color-primary: #e67e22;
+  --color-shade-1: #cf711f;
+  --color-shade-2: #a15818; /* !Allowed on #fdf2e9*/
+  --color-shade-3: #45200a;
+
+  --color-primary-transparent-50: rgba(230, 125, 34, 0.5);
+  --color-transparent-1: rgba(253, 241, 232, 0.5);
+
+  /** GRAY COLOR **/
+  --color-gray-1: #333;
+  --color-gray-2: #555;
+  --color-gray-3: #6f6f6f; /* !Allowed on #fdf2e9 */
+  --color-gray-4: #767676; /* !Allowed on white */
+  --color-gray-5: #888;
+
+  /** TAG COLOR **/
+  --color-tag-vegetarian: #51cf66;
+  --color-tag-vegan: #a9e34b;
+  --color-tag-paleo: #ffd43b;
+
+  /** FONT WEIGHTS **/
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /** LINE HEIGHTS **/
+  --line-height-h1: 1.05;
+  --line-height-h2: 1.2;
+  --line-height-paragraph: 1.8;
+
+  /** LETTER SPACING **/
+  --letter-spacing-big-text: -0.5px;
+  --letter-spacing-small-text: 0.75px;
+
+  /** SHADOWS **/
+  --box-shadow-light: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
+  --box-shadow-dark: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+
+  /** BORDER RADIUS **/
+  --border-radius-sm: 9px;
+  --border-radius-md: 12px;
+}
+
+/* ================= HEADER SECTION ================= */
+
+/* GENERAL LAYOUT */
+.header {
+  /* Box */
+  height: 9.6rem; /* !Because we want it to be sticky */
+  padding-inline: 4.8rem;
+
+  /* Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+/* LOGO */
+.logo {
+  height: 2.2rem;
+}
+
+/***** NAVBAR *****/
+
+/* GENERAL LAYOUT */
+.main-nav-list {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+/* LINK */
+.main-nav-link:link,
+.main-nav-link:visited {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-medium);
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--color-shade-2);
+}
+
+/* CTA LINK */
+.nav-cta:link,
+.nav-cta:visited {
+  /* Font */
+  color: white;
+
+  /* Box */
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--border-radius-sm);
+
+  /* Style */
+  background-color: var(--color-primary);
+}
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: var(--color-shade-1);
+}
+
+/* ================= HERO SECTION ================= */
+
+/***** HERO GENERAL LAYOUT *****/
+
+.section-hero {
+  /* Box */
+  padding-block: 4.8rem 9.6rem;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+.hero {
+  /* Box */
+  max-width: 130rem;
+  margin-inline: auto;
+  padding-inline: 3.2rem;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 9.6rem;
+}
+
+/***** HERO TEXT *****/
+
+/* DESCRIPTION */
+.hero-description {
+  /* Font */
+  font-size: 2rem;
+  line-height: var(--line-height-paragraph);
+
+  /* Box */
+  margin-bottom: 4.8rem;
+}
+
+/***** SATISFIED CUSTOMERS *****/
+
+/* GENERAL LAYOUT */
+.satisfied-customers {
+  /* Box */
+  margin-top: 8rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* CUSTOMER IMAGES CONTAINER */
+.customers-img-container {
+  /* Layout */
+  display: flex;
+}
+
+/* SATISFIED CUSTOMERS IMAGES */
+.customers-img-container img {
+  /* Box */
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-tint-2);
+  margin-right: -1.6rem;
+}
+.customers-img-container img:last-child {
+  margin-right: 0;
+}
+
+/* DELIVERED MEALS */
+.total-delivered-meals {
+  /* Font */
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-semibold);
+}
+.total-delivered-meals span {
+  color: var(--color-shade-2);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ================= FEATURES SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-featured {
+  padding-block: 4.8rem 3.2rem;
+}
+
+/* TITLE */
+.heading-featured-in {
+  /* Font */
+  color: var(--color-gray-5);
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-small-text);
+  text-transform: uppercase;
+  text-align: center;
+
+  /* Box */
+  margin-bottom: 2.4rem;
+}
+
+/* LOGOS */
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  /* Box */
+  height: 3.2rem;
+
+  /* Style */
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+/* ================= HOW IT WORKS SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-how {
+  /* Box */
+  padding-block: 9.6rem;
+}
+
+/***** IMAGE *****/
+
+/* CIRCLE */
+.step-img-box {
+  position: relative;
+}
+.step-img-box::before,
+.step-img-box::after {
+  /* General Style */
+  content: "";
+  display: block;
+
+  /* Box */
+  border-radius: 50%;
+
+  /* Layout */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  /* Box */
+  /* !these are actually 60%s of the parent's elements width. */
+  width: 60%;
+  padding-bottom: 60%;
+
+  /* Layout */
+  z-index: -2;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+.step-img-box::after {
+  /* Box */
+  width: 45%;
+  padding-bottom: 45%;
+
+  /* Layout */
+  z-index: -1;
+
+  /* Style */
+  background-color: var(--color-tint-1);
+}
+
+/* IMAGE */
+.step-img {
+  width: 35%;
+  margin-inline: auto; /* !Centering the image */
+}
+
+/***** TEXT *****/
+
+/* NUMBER */
+.step-number {
+  /* Font */
+  color: #ddd;
+  font-size: 8.6rem;
+  font-weight: var(--font-weight-semibold);
+
+  /* Box */
+  margin-bottom: 1.2rem;
+}
+
+/* DESCRIPTION */
+.step-description {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+}
+
+/* ================= MEALS SECTION ================= */
+.section-meals {
+  padding-block: 9.6rem;
+}
+
+/***** CARD GENERAL LAYOUT *****/
+.meal-card {
+  /* Box */
+  border-radius: var(--border-radius-md);
+
+  /* Style */
+  box-shadow: var(--box-shadow-light);
+  overflow: hidden;
+
+  /* Animation */
+  transition: all 0.4s;
+}
+.meal-content {
+  /* Box */
+  padding: 3.2rem 4.8rem 4.8rem;
+}
+
+.meal-card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgb(0 0 0 / 6%);
+}
+
+/***** CARD TEXT *****/
+
+/* MEAL's NAME */
+.meal-name {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-semibold);
+
+  margin-bottom: 3.2rem;
+}
+
+/***** MEAL's ATTRIBUTE *****/
+
+/* TAG */
+.meal-tags {
+  margin-bottom: 1.2rem;
+
+  /* Layout */
+  display: flex;
+  gap: 6px;
+}
+.tag {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-small-text);
+  text-transform: uppercase;
+
+  /* Box */
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10rem;
+}
+.tag--vegetarian {
+  background-color: var(--color-tag-vegetarian);
+}
+.tag--vegan {
+  background-color: var(--color-tag-vegan);
+}
+.tag--paleo {
+  background-color: var(--color-tag-paleo);
+}
+
+/* GENERAL LAYOUT */
+.meal-item {
+  /* Font */
+  font-size: 1.8rem;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.meal-item + .meal-item {
+  margin-top: 2rem;
+}
+
+/* ICON */
+.meal-icon {
+  /* Font */
+  color: var(--color-primary);
+  /* Box */
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/***** LINK ALL RECIPES *****/
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* ================= TESTIMONIALS SECTION ================= */
+
+.section-testimonials {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+/***** TESTIMONIALS *****/
+
+/* GENERAL LAYOUT */
+.testimonials {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6.4rem;
+  row-gap: 4.8rem;
+}
+.testimonials-container {
+  /* Box */
+  padding: 9.6rem;
+}
+
+/* IMAGE */
+.testimonial-img {
+  /* Box */
+  width: 6.4rem;
+  border-radius: 50%;
+
+  /* Box */
+  margin-bottom: 1.2rem;
+}
+
+/* TESTIMONIAL */
+.testimonial-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+
+  /* Box */
+  margin-bottom: 1.6rem;
+}
+
+/* AUTHOR */
+.testimonial-name {
+  font-size: 1.6rem;
+  color: var(--color-gray-3);
+}
+
+/***** GALLERY *****/
+
+/* GENERAL LAYOUT */
+.gallery {
+  /* Box */
+  padding: 1.6rem;
+  padding-left: 0;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+/* IMAGE */
+.gallery figure {
+  overflow: hidden;
+}
+.gallery-img {
+  /* Animation */
+  transition: transform 0.4s;
+}
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= PRICING SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-pricing {
+  padding-block: 9.6rem;
+}
+
+.pricing-plan {
+  /* Box */
+  width: 75%; /* !75% of grid cell's width */
+  padding: 4.8rem;
+  border-radius: var(--border-radius-md);
+  border: 2px solid var(--color-tint-2);
+}
+
+/* GENERAL STYLE */
+.pricing-plan--starter {
+  justify-self: end;
+}
+
+.pricing-plan--complete {
+  background-color: var(--color-tint-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  /* General style */
+  content: "Best value";
+  display: inline-block;
+
+  /* Layout */
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-small-text);
+
+  /* Box */
+  padding: 0.8rem 8rem;
+
+  /* Style */
+  background-color: var(--color-tag-paleo);
+  transform: rotate(45deg);
+}
+
+/***** CARD HEADER *****/
+
+/* GENERAL LAYOUT */
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+/* PLAN NAME */
+.plan-name {
+  /* Font */
+  color: var(--color-shade-1);
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-small-text);
+
+  /* Box */
+  margin-bottom: 3.2rem;
+}
+
+/* PRICE */
+.plan-price {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 6.2rem;
+  font-weight: var(--font-weight-semibold);
+  /* Box */
+  margin-bottom: 1.6rem;
+}
+.plan-price span {
+  font-size: 3rem;
+  font-weight: var(--font-weight-medium);
+  /* Box */
+  margin-right: 0.8rem;
+}
+
+/* PRICE TEXT */
+.plan-text {
+  /* Font */
+  color: var(--color-gray-3);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* CTA BUTTON */
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+/* PLAN DETAILS */
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ================= FEATURE SECTION ================= */
+
+/* ICON */
+.feature-icon {
+  color: var(--color-primary);
+
+  /* Box */
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+
+/* TITLE */
+.feature-title {
+  /* Font */
+  color: var(--color-gray-1);
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  /* Box */
+  margin-bottom: 1.6rem;
+}
+
+/* TEXT */
+.feature-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+}
+
+/* ================= CTA SECTION ================= */
+
+/* GENERAL LAYOUT */
+.section-cta {
+  padding-block: 4.8rem 12.8rem;
+}
+
+.cta {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  /* Style */
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-tint-3),
+    var(--color-primary)
+  );
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-dark);
+  overflow: hidden;
+}
+
+/***** TEXT BOX *****/
+
+/* GENERAL LAYOUT */
+.cta-text-box {
+  /* Font */
+  color: var(--color-shade-3);
+
+  /* Box */
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+/* TITLE */
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+/* DESCRIPTION */
+.cta-text {
+  /* Font */
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+  /* Box */
+  margin-bottom: 4.8rem;
+}
+
+/***** CTA FORM *****/
+
+.cta-form {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+/* LABEL */
+.cta-form label {
+  /* Font */
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-medium);
+
+  /* Box */
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+/* INPUT */
+.cta-form input,
+.cta-form select {
+  /* Font */
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.8rem;
+
+  /* Box */
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+
+  /* Style */
+  background-color: var(--color-tint-2);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+}
+
+/* INPUT PLACEHOLDER */
+.cta-form input::placeholder {
+  /* Font */
+  color: #aaa;
+}
+
+/* FOCUS STATE */
+.cta *:focus {
+  box-shadow: 0 0 0 8px var(--color-transparent-1);
+}
+
+/***** IMAGE *****/
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(238, 164, 100, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url(/07-Omnifood-Desktop/img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ================= FOOTER SECTION ================= */
+.footer {
+  padding-block: 12.8rem;
+  /* Style */
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/***** COLUMN LOGO *****/
+
+/* GENERAL LAYOUT */
+.logo-col {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  /* Layout */
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  /* Box */
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* COPYRIGHT */
+.copyright {
+  /* Font */
+  color: var(--color-gray-4);
+  font-size: 1.4rem;
+  line-height: 1.6;
+
+  /* Layout */
+  margin-top: auto;
+}
+
+/***** CONTACT US *****/
+.contacts {
+  /* Font */
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.contacts p:first-child {
+  margin-bottom: 2.4rem;
+}
+
+/***** FOOTER NAVBAR *****/
+
+/* FOOTER HEADING */
+.footer-heading {
+  /* Font */
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-medium);
+  /* Box */
+  margin-bottom: 4rem;
+}
+
+/* FOOTER LINK */
+.footer-link:link,
+.footer-link:visited {
+  /* Font */
+  color: var(--color-gray-4);
+}
+.footer-link:hover,
+.footer-link:active {
+  color: var(--color-gray-1);
+}
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
