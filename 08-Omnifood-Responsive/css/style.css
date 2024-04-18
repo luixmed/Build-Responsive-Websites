@@ -1,53 +1,3 @@
-/* !REMOVE CUSTOM PROPERTIES AND PUT IT BACK IN general.css */
-
-:root {
-  /** PRIMARY COLOR **/
-  --color-tint-2: #fdf2e9;
-  --color-tint-1: #fae5d3;
-  --color-tint-3: #eb984e;
-  --color-primary: #e67e22;
-  --color-shade-1: #cf711f;
-  --color-shade-2: #a15818; /* !Allowed on #fdf2e9*/
-  --color-shade-3: #45200a;
-
-  --color-primary-transparent-50: rgba(230, 125, 34, 0.5);
-  --color-transparent-1: rgba(253, 241, 232, 0.5);
-
-  /** GRAY COLOR **/
-  --color-gray-1: #333;
-  --color-gray-2: #555;
-  --color-gray-3: #6f6f6f; /* !Allowed on #fdf2e9 */
-  --color-gray-4: #767676; /* !Allowed on white */
-  --color-gray-5: #888;
-
-  /** TAG COLOR **/
-  --color-tag-vegetarian: #51cf66;
-  --color-tag-vegan: #a9e34b;
-  --color-tag-paleo: #ffd43b;
-
-  /** FONT WEIGHTS **/
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-
-  /** LINE HEIGHTS **/
-  --line-height-h1: 1.05;
-  --line-height-h2: 1.2;
-  --line-height-paragraph: 1.8;
-
-  /** LETTER SPACING **/
-  --letter-spacing-big-text: -0.5px;
-  --letter-spacing-small-text: 0.75px;
-
-  /** SHADOWS **/
-  --box-shadow-light: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
-  --box-shadow-dark: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
-
-  /** BORDER RADIUS **/
-  --border-radius-sm: 9px;
-  --border-radius-md: 12px;
-}
-
 /* ================= HEADER SECTION ================= */
 
 /* GENERAL LAYOUT */
@@ -63,6 +13,9 @@
 
   /* Style */
   background-color: var(--color-tint-2);
+
+  /* !In order to animate mobile navbar */
+  position: relative;
 }
 
 /* LOGO */
@@ -77,7 +30,7 @@
   /* Layout */
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 /* LINK */
@@ -109,6 +62,27 @@
 .nav-cta:hover,
 .nav-cta:active {
   background-color: var(--color-shade-1);
+}
+
+/***** MOBILE NAVBAR *****/
+
+/* BUTTON */
+.btn-mobile-nav {
+  background: none;
+
+  display: none;
+}
+
+/* ICONS */
+.icon-mobile-nav {
+  color: var(--color-gray-1);
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+/* CLOSE ICON */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* ================= HERO SECTION ================= */
@@ -239,6 +213,7 @@
 /* CIRCLE */
 .step-img-box {
   position: relative;
+  text-align: center;
 }
 .step-img-box::before,
 .step-img-box::after {
@@ -282,7 +257,6 @@
 /* IMAGE */
 .step-img {
   width: 35%;
-  margin-inline: auto; /* !Centering the image */
 }
 
 /***** TEXT *****/

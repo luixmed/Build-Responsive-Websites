@@ -1,0 +1,283 @@
+/* Below 1344px (Smaller desktops) */
+@media screen and (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 1.6rem;
+  }
+}
+
+/* Below 1200px (Landscape Tablets) */
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* !9px */
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding-inline: 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    column-gap: 4.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+}
+
+/* Below 944px (Tablets) */
+@media screen and (max-width: 59em) {
+  html {
+    font-size: 50%; /* !8px */
+  }
+
+  /***** HERO SECTION *****/
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-inline: 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+
+  .satisfied-customers {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  /***** FEATURES SECTION *****/
+  .logos img {
+    height: 2.4rem;
+  }
+
+  /***** HOW IT WORKS SECTION *****/
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  /***** MEALS SECTION *****/
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /***** CTA SECTION  *****/
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  /* CTA FORM */
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* FORM  BUTTON */
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  /***** MOBILE NAVBAR *****/
+  /* BUTTON */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  /***** FUNCTIONALITY *****/
+
+  .main-nav {
+    background-color: aqua;
+    /* Layout */
+    position: absolute;
+    inset: 0;
+
+    /* Centering its content */
+    display: grid;
+    place-content: center;
+
+    /* !Hide navigation */
+    opacity: 0;
+
+    /* !Make it unaccessible to mouse and keyboards */
+    pointer-events: none;
+
+    /* !Hide it from screen readers */
+    visibility: hidden;
+
+    /* Animation */
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-open .main-nav {
+    /* Animation */
+    opacity: 1;
+
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* CLOSE ICON */
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  /* MENU ICON */
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+}
+
+/* Below 704px (Smaller Tablets) */
+@media screen and (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    justify-self: center;
+
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+    justify-content: center;
+  }
+}
+
+/* Below 544px (Phones) */
+@media screen and (max-width: 34em) {
+  .grid--3-cols,
+  .grid--4-cols,
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .section-hero {
+    padding-block: 2.4rem 4.8rem;
+  }
+
+  .hero {
+    padding-inline: 3.2rem;
+  }
+
+  /* GENERAL BUTTON STYLES */
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .testimonials-container {
+    padding: 3.2rem;
+    gap: 1.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+}

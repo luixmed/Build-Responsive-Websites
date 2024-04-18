@@ -2,6 +2,54 @@
 
 /* !Bring back the CUSTOM PROPERTIES */
 
+:root {
+  /** PRIMARY COLOR **/
+  --color-tint-2: #fdf2e9;
+  --color-tint-1: #fae5d3;
+  --color-tint-3: #eb984e;
+  --color-primary: #e67e22;
+  --color-shade-1: #cf711f;
+  --color-shade-2: #a15818; /* !Allowed on #fdf2e9*/
+  --color-shade-3: #45200a;
+
+  --color-primary-transparent-50: rgba(230, 125, 34, 0.5);
+  --color-transparent-1: rgba(253, 241, 232, 0.5);
+
+  /** GRAY COLOR **/
+  --color-gray-1: #333;
+  --color-gray-2: #555;
+  --color-gray-3: #6f6f6f; /* !Allowed on #fdf2e9 */
+  --color-gray-4: #767676; /* !Allowed on white */
+  --color-gray-5: #888;
+
+  /** TAG COLOR **/
+  --color-tag-vegetarian: #51cf66;
+  --color-tag-vegan: #a9e34b;
+  --color-tag-paleo: #ffd43b;
+
+  /** FONT WEIGHTS **/
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /** LINE HEIGHTS **/
+  --line-height-h1: 1.05;
+  --line-height-h2: 1.2;
+  --line-height-paragraph: 1.8;
+
+  /** LETTER SPACING **/
+  --letter-spacing-big-text: -0.5px;
+  --letter-spacing-small-text: 0.75px;
+
+  /** SHADOWS **/
+  --box-shadow-light: 0 2.4rem 4.8rem rgb(0 0 0 / 7%);
+  --box-shadow-dark: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
+
+  /** BORDER RADIUS **/
+  --border-radius-sm: 9px;
+  --border-radius-md: 12px;
+}
+
 /* TYPOGRAPHY SYSTEM
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
@@ -32,13 +80,16 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1;
+
+  /* !In order to animate the mobile navbar */
+  overflow-x: hidden;
 }
 
 /* ================= BASIC STYLES ================= */
 
 /* IMAGE */
 img {
-  display: block;
+  display: inline-block;
   max-width: 100%;
   height: auto;
 }
@@ -215,6 +266,7 @@ strong {
 .list-item {
   /* Font */
   font-size: 1.8rem;
+  line-height: 2.5rem;
 
   /* Layout */
   display: flex;
