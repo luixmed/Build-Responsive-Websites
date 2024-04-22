@@ -39,10 +39,20 @@ body {
 /* IMAGE */
 
 /* LINKS */
+a {
+  display: inline-block;
+  text-decoration: none;
+
+  /* Animation */
+  transition: all 0.3s;
+}
 
 /* BUTTON */
 
 /* LIST */
+ul {
+  list-style: none;
+}
 
 /* BUTTON ANIMATION */
 
@@ -51,6 +61,11 @@ body {
 /* FOCUS STATE */
 
 /* ================= REUSABLE COMPONENTS ================= */
+
+/***** LOGO *****/
+.logo {
+  height: 2.2rem;
+}
 
 /***** HEADINGS *****/
 
