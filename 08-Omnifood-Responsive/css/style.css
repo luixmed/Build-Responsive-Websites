@@ -13,9 +13,6 @@
 
   /* Style */
   background-color: var(--color-tint-2);
-
-  /* !In order to animate mobile navbar */
-  position: relative;
 }
 
 /* LOGO */
@@ -70,6 +67,7 @@
 .btn-mobile-nav {
   background: none;
 
+  /* Hide the buttons */
   display: none;
 }
 
