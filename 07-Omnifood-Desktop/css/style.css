@@ -109,20 +109,75 @@
 /* ================= HERO SECTION ================= */
 
 /***** HERO GENERAL LAYOUT *****/
+.section-hero {
+  padding-block: 4.8rem 9.6rem;
+  background-color: var(--color-tint-2);
+}
+
+.hero {
+  /* Box */
+  max-width: 130rem;
+  margin-inline: auto;
+  padding-inline: 3.2rem;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 9.6rem;
+}
 
 /***** HERO TEXT *****/
 
 /* DESCRIPTION */
+.hero-description {
+  /* Font */
+  color: var(--color-gray-2);
+  font-size: 2rem;
+  line-height: 1.6;
+
+  /* Box */
+  margin-bottom: 4.8rem;
+}
 
 /***** SATISFIED CUSTOMERS *****/
 
 /* GENERAL LAYOUT */
+.satisfied-customers {
+  /* Layout */
+  display: flex;
+  align-items: center;
+
+  /* Box */
+  margin-top: 8rem;
+}
 
 /* CUSTOMER IMAGES CONTAINER */
+.customers-img-box {
+  margin-right: 1.6rem;
+}
 
 /* SATISFIED CUSTOMERS IMAGES */
+.customer-img {
+  /* Box */
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-tint-2);
+}
+.customer-img:not(:last-child) {
+  margin-right: -1.6rem;
+}
 
 /* DELIVERED MEALS */
+.total-customers {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-semibold);
+}
+.total-customers span {
+  color: var(--color-shade-2);
+  font-weight: var(--font-weight-bold);
+}
 
 /* ================= FEATURES SECTION ================= */
 
