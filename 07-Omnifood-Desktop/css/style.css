@@ -454,16 +454,87 @@
 /* ================= PRICING SECTION ================= */
 
 /* GENERAL LAYOUT */
+.section-pricing {
+  padding-block: 9.6rem;
+}
+
+/* GENERAL LAYOUT */
+.pricing-plan {
+  /* Box */
+  width: 75%;
+  padding: 4.8rem;
+  border: 2px solid var(--color-tint-1);
+  border-radius: var(--border-radius-md);
+
+  text-align: center;
+}
 
 /* GENERAL STYLE */
+.pricing-plan--starter {
+  justify-self: self-end;
+}
+
+.pricing-plan--complete {
+  border-color: var(--color-tint-2);
+  background-color: var(--color-tint-2);
+  position: relative;
+
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best Value";
+
+  /* Font */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-small-text);
+
+  /* Box */
+  display: block;
+  padding: 6px 8rem;
+
+  /* Layout */
+  position: absolute;
+  top: 7%;
+  right: -19%;
+  transform: rotate(45deg);
+
+  /* Style */
+  background-color: var(--color-tag-paleo);
+}
 
 /***** CARD HEADER *****/
 
-/* GENERAL LAYOUT */
+.plan-header {
+  margin-bottom: 4.8rem;
+}
 
 /* PLAN NAME */
+.plan-name {
+  color: var(--color-shade-1);
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-small-text);
+
+  margin-bottom: 3.2rem;
+}
 
 /* PRICE */
+.plan-price {
+  color: var(--color-gray-1);
+  font-size: 6.4rem;
+  font-weight: var(--font-weight-semibold);
+
+  margin-bottom: 2.4rem;
+}
+.plan-price span {
+  font-size: 3rem;
+  font-weight: var(--font-weight-medium);
+  margin-right: 0.8rem;
+}
 
 /* PRICE TEXT */
 
