@@ -383,22 +383,73 @@
 /***** LINK ALL RECIPES *****/
 
 /* ================= TESTIMONIALS SECTION ================= */
+.section-testimonials {
+  /* Layout */
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  align-items: center;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+.testimonials-container {
+  padding: 9.6rem;
+}
 
 /***** TESTIMONIALS *****/
 
 /* GENERAL LAYOUT */
-
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8rem;
+  row-gap: 6.4rem;
+}
 /* IMAGE */
+.testimonial-img {
+  /* Box */
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
 
 /* TESTIMONIAL */
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+
+  margin-bottom: 1.6rem;
+}
 
 /* AUTHOR */
+.testimonial-name {
+  color: var(--color-gray-3);
+}
 
 /***** GALLERY *****/
 
 /* GENERAL LAYOUT */
+.gallery {
+  /* Layout */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+
+  /* Box */
+  padding-right: 1.6rem;
+}
 
 /* IMAGE */
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img {
+  transition: transform 0.4s;
+}
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
 
 /* ================= PRICING SECTION ================= */
 
