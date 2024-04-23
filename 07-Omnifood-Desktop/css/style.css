@@ -182,10 +182,35 @@
 /* ================= FEATURES SECTION ================= */
 
 /* GENERAL LAYOUT */
+.section-featured {
+  padding-block: 4.8rem 3.2rem;
+}
+.logos-container {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* TITLE */
+.featured-title {
+  color: var(--color-gray-5);
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-small-text);
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 2.4rem;
+}
 
 /* LOGOS */
+.featured-logo {
+  /* Box */
+  height: 3.2rem;
+
+  /* Style */
+  filter: brightness(0);
+  opacity: 55%;
+}
 
 /* ================= HOW IT WORKS SECTION ================= */
 
