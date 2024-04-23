@@ -44,10 +44,15 @@ body {
 .grid {
   /* Layout */
   display: grid;
-  column-gap: 9.6rem;
+  column-gap: 6.4rem;
+  row-gap: 8rem;
 }
 .grid:not(:last-child) {
   margin-bottom: 6.4rem;
+}
+
+.grid--center-v {
+  align-items: center;
 }
 
 .grid--2-cols {
@@ -104,15 +109,47 @@ ul {
 }
 
 /***** HEADINGS *****/
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: var(--color-gray-1);
+  font-weight: var(--font-weight-bold);
+}
+
 .heading-primary {
   /* Font */
-  color: var(--color-gray-1);
   font-size: 5.2rem;
   line-height: var(--line-height-h1);
   letter-spacing: var(--letter-spacing-big-text);
 
   /* Box */
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  /* Font */
+  font-size: 4.4rem;
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-big-text);
+
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  color: var(--color-shade-1);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-small-text);
+
+  /* Box */
+  display: block;
+  margin-bottom: 1.6rem;
 }
 
 /***** BUTTONS *****/

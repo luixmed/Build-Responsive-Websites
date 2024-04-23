@@ -215,18 +215,74 @@
 /* ================= HOW IT WORKS SECTION ================= */
 
 /* GENERAL LAYOUT */
+.section-how {
+  margin-block: 9.6rem;
+}
 
 /***** IMAGE *****/
+/* GENERAL LAYOUT */
+.step-img-box {
+  /* Layout */
+  text-align: center;
+  position: relative;
+}
 
 /* CIRCLE */
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+
+  /* Box */
+  display: block;
+  border-radius: 50%;
+
+  /* Layout */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.step-img-box::before {
+  /* Box */
+  width: 60%;
+  padding-bottom: 60%;
+
+  /* Style */
+  background-color: var(--color-tint-2);
+}
+.step-img-box::after {
+  /* Box */
+  width: 50%;
+  padding-bottom: 50%;
+
+  /* Style */
+  background-color: var(--color-tint-1);
+}
 
 /* IMAGE */
+.step-img-box img {
+  width: 35%;
+}
 
 /***** TEXT *****/
 
 /* NUMBER */
+.step-number {
+  color: #ddd;
+  font-size: 8.6rem;
+  font-weight: var(--font-weight-semibold);
+
+  /* Box */
+  display: block;
+  margin-bottom: 1.2rem;
+}
 
 /* DESCRIPTION */
+.step-description {
+  font-size: 1.8rem;
+  line-height: var(--line-height-paragraph);
+}
 
 /* ================= MEALS SECTION ================= */
 
